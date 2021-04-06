@@ -1,5 +1,9 @@
-magicalUnicorns();
-var magicalUnicorns = function(){
-    console.log("Will it blend?");
-}
-console.log("Don't breathe this!");
+const cars = ['Tesla', 'Mercedes', 'Honda']
+const [ randomCar ] = cars
+const [ ,otherRandomCar ] = cars
+//Predict the output
+console.log(randomCar)
+console.log(otherRandomCar)
+//
+//
+//
