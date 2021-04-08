@@ -1,38 +1,20 @@
-class Ninja{
-    constructor(nombre){
-        this.nombre = nombre;
-        this.salud = 0;
-        this.velocidad = 3;
-        this.fuerza = 3;
-    }
-    sayName(){
-        console.log(this.nombre)
-    }
-    showStats(){
-        const{salud, fuerza, velocidad} = this;
-        return{
-            salud,
-            fuerza,
-            velocidad
-        };
-    }
-    drinkSake(){
-        this.salud += 10;
-    }
-}
-
+const Ninja = require("./ninja");
 
 class Sensei extends Ninja{
     constructor(nombre){
         super(nombre);
-        this.salud += 200;
+        this.salud = 200;
         this.velocidad = 10;
         this.fuerza = 10;
         this.sabiduria = 10;   
     }
     speakWisdom(){
-        const message = super.drinkSake();
+        super.drinkSake();
         console.log("ejecute speakWisdom")
+    }
+    showStats(){
+        const {sabiduria} = this;
+        return{...super.showStats(), sabiduria}
     }
 }
 
