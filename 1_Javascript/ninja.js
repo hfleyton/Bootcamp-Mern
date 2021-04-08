@@ -9,17 +9,23 @@ class Ninja{
         console.log(this.nombre)
     }
     showStats(){
-        console.log("nombre : "+ this.nombre)
-        console.log("fuerza : " + this.fuerza)
-        console.log("velocidad : " + this.velocidad)
-        console.log("salud : " + this.salud)
+        const{nombre, salud, fuerza, velocidad} = this;
+        return{
+            nombre,
+            salud,
+            fuerza,
+            velocidad
+        };
     }
     drinkSake(){
-        this.salud = 10;
+        this.salud += 10;
     }
 }
 
-const ninja1 = new Ninja("Hyabusa");
+module.exports  = Ninja;
+
+
+/* const ninja1 = new Ninja("Hyabusa");
 ninja1.sayName();
 ninja1.drinkSake();
-ninja1.showStats();
+ninja1.showStats(); */
