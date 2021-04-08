@@ -9,10 +9,12 @@ class Ninja{
         console.log(this.nombre)
     }
     showStats(){
-        console.log("nombre : "+ this.nombre)
-        console.log("fuerza : " + this.fuerza)
-        console.log("velocidad : " + this.velocidad)
-        console.log("salud : " + this.salud)
+        const{salud, fuerza, velocidad} = this;
+        return{
+            salud,
+            fuerza,
+            velocidad
+        };
     }
     drinkSake(){
         this.salud += 10;
@@ -38,5 +40,5 @@ class Sensei extends Ninja{
 const superSensei = new Sensei("Master Splinter");
 superSensei.speakWisdom();
 // -> "What one programmer can do in one month, two programmers can do in two months."
-superSensei.showStats();
+console.log(superSensei.showStats());
 // -> "Name: Master Splinter, Health: 210, Speed: 10, Strength: 10"
