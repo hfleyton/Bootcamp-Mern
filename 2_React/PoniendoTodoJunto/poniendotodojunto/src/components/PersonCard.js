@@ -8,6 +8,11 @@ class PersonCard extends Component{
         };
     }
 
+   /*  shouldComponentUpdate(prevProps, prevState) {
+        console.table({prevProps, prevState});
+        return this.state.age < 100 ? false : true;
+      } */
+
     happyBirthday = () =>{
         this.setState({age : this.state.age + 1});
     };

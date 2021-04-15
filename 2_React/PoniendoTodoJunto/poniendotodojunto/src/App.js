@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import PersonCard from './components/PersonCard';
+import PersonCard from './components/PersonCard_2';
 
 const persons = [
 {firstName:"Jane",lastname:"Doe", age: 45, hairColor:"Black"},
