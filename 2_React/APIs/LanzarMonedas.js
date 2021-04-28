@@ -17,14 +17,29 @@ function fiveHeads() {
                 headsCount = 0;
             }
         } else {
-            reject(`Ha superado el limite de intentos de ${attempts}`);
+            reject(`Ha superado el limite de ${attempts} intentos`);
             break
         }
     }
-    return resolve(`Le tomo ${attempts} intentos obtener 5 caras`);
+    resolve(`Le tomo ${attempts} intentos obtener 5 caras`);
     });
 }
 
-fiveHeads()
+/* fiveHeads()
     .then( res => console.log(res) )
-    .catch( err => console.log(err) );
+    .catch( err => console.error(err) );
+
+console.log("Promesa ejecutandose") */
+
+(async() => {
+    try {
+        const resultado = await fiveHeads();
+        console.log(resultado);
+        console.log("Termino app")
+    }catch (e) {
+        console.log("Catch")
+        console.log(e);
+    }
+})();
+
+console.log("Promesa ejecutandose")
