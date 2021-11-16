@@ -1,0 +1,58 @@
+### Post createUser
+
+POST http://localhost:8000/api/user
+content-type: application/json
+
+{
+    "rut": "8868940-2",
+    "fullName": "Isabel Cabrera",
+    "password": "1234"
+}
+
+### Post loginUser
+
+POST http://localhost:8000/api/loginUser
+content-type: application/json
+
+{
+    "rut": "6797044-6",
+    "password": "1234"
+}
+
+### Post updateAbonoRetiro
+
+POST http://localhost:8000/api/updateAbonoRetiro
+content-type: application/json
+
+{
+    "rut": "16952947-7",
+    "movimiento" : {
+        "monto" : 5000,
+        "operacion" : "abono"
+            }
+}
+
+### Post updateTransferencia
+
+POST http://localhost:8000/api/updateTransferencia
+content-type: application/json
+
+{
+    "rutOrigen": "16952947-7",
+    "rutDestino":"888940-2",
+    "movimiento" : {
+        "monto" : 10000,
+        "operacion" : "transferencia"
+            }
+}
+
+
+### Post getMovimiento
+
+POST http://localhost:8000/api/getMovimientos
+content-type: application/json
+Cookie: usertoken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTdlMjNiOTRlOTFiNDc2ODJlMzVjZCIsImlhdCI6MTYyMTYyMDgyNX0.2E0d26Vujs09VdXJPEmVJNlACd774gm4HCi5mOnOgoE
+
+{
+    "rut": "16952947-7"
+}

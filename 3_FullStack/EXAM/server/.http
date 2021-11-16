@@ -1,0 +1,78 @@
+### Post createUser
+POST http://localhost:8000/api/createUser
+content-type: application/json
+
+{
+    "email" : "caro.elizondo@gmail.com", 
+    "firstName" : "Hector", 
+    "lastName" : "Leyton", 
+    "password" : "1234"
+}
+
+### Post loginUser
+POST http://localhost:8000/api/loginUser
+content-type: application/json
+
+{
+    "email" : "felipeleyton@live.cl",  
+    "password" : "1234"
+}
+
+### Post logOUTUser
+POST http://localhost:8000/api/logoutUser
+content-type: application/json
+
+{
+}
+
+### Post createMovie
+POST http://localhost:8000/api/createMovie
+content-type: application/json
+
+{
+    "title" : "",
+    "reviews" : {
+        "reviewerEmail": "felipeleyton@live.cl",
+        "review" : "Excellent film",
+        "rating" : 5
+        }
+}
+
+### Post deleteMovie
+POST http://localhost:8000/api/deleteMovie
+content-type: application/json
+
+{
+    "title" : "prueba"
+}
+
+
+### Post getReviews
+POST http://localhost:8000/api/getReviews
+content-type: application/json
+
+{
+    "title" : "Rocky I"
+}
+
+### Post getMovies
+POST  http://localhost:8000/api/getMovies
+content-type: application/json
+
+{
+
+}
+
+### Post addReview
+POST http://localhost:8000/api/addReview
+content-type: application/json
+
+{
+    "title" : "Rocky III",
+    "reviews" : {
+        "reviewerEmail": "felipeleyton@live.cl",
+        "review" : "",
+        "rating" : 1
+        }
+}
+

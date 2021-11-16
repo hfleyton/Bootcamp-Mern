@@ -1,0 +1,15 @@
+
+GET http://localhost:8000/api/jokes/
+
+####
+PUT http://localhost:8000/api/jokes/new
+Content-Type: application/json
+
+{
+    "setup" : "Chiste_1",
+    "puchline" : "Respuesta_1"
+
+}
+
+###
+DELETE  http://localhost:8000/api/jokes/delete/6099551fed89e7034c18c6ef

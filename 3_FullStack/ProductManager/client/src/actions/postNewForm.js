@@ -1,10 +1,11 @@
 const postNewForm = async (data) => {
+    console.log(data)
     try{
         const res = await fetch("http://localhost:8000/api/product", {
         method: 'POST',
         body: JSON.stringify(data),
-        Headers:{
-            'Content-Type':'application/json',
+        headers:{
+            'Content-Type': 'application/json',
         },
     });
     if (!res.ok) throw new Error(res.text);
